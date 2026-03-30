@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-לעסק — מערכת ניהול עסק חכמה</title>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* ===== Reset ===== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* ===== Base ===== */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Heebo', sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #1A1A2E;
+      background: #FFFFFF;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 48px;
+    }
+
+    h2 {
+      font-size: 36px;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    /* ===== Utility ===== */
+    .container {
+      max-width: 1200px;
+      margin-inline: auto;
+      padding-inline: 24px;
+    }
+
+    .section-padding {
+      padding-block: 80px;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .muted {
+      color: #6B7280;
+    }
+
+    /* ===== Buttons ===== */
+    .btn {
+      display: inline-block;
+      font-family: 'Heebo', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      padding: 14px 36px;
+      transition: opacity 0.2s ease;
+    }
+
+    .btn:hover {
+      opacity: 0.88;
+    }
+
+    .btn-primary {
+      background: #1A1A2E;
+      color: #FFFFFF;
+    }
+
+    .btn-gold {
+      background: #E8B931;
+      color: #1A1A2E;
+    }
+
+    .btn-gold-lg {
+      background: #E8B931;
+      color: #1A1A2E;
+      font-size: 20px;
+      padding: 18px 48px;
+    }
+
+    /* ===== Nav ===== */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #FFFFFF;
+      border-bottom: 1px solid #E5E7EB;
+      height: 70px;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .nav-brand {
+      font-size: 24px;
+      font-weight: 700;
+      color: #1A1A2E;
+    }
+
+    .nav .btn {
+      padding: 10px 28px;
+      font-size: 16px;
+    }
+
+    /* ===== Hero ===== */
+    .hero {
+      padding-block: 80px 60px;
+      background: #FFFFFF;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .hero-pre {
+      font-size: 16px;
+      color: #6B7280;
+      margin-bottom: 16px;
+      font-weight: 500;
+    }
+
+    .hero h1 {
+      margin-bottom: 24px;
+      color: #1A1A2E;
+    }
+
+    .hero-sub {
+      font-size: 20px;
+      color: #4B5563;
+      margin-bottom: 40px;
+      max-width: 680px;
+      margin-inline: auto;
+      line-height: 1.6;
+    }
+
+    .hero-cta-wrap {
+      margin-bottom: 16px;
+    }
+
+    .hero-reassurance {
+      font-size: 14px;
+      color: #6B7280;
+      margin-bottom: 60px;
+    }
+
+    /* ===== WhatsApp Mockup ===== */
+    .whatsapp-mockup {
+      max-width: 400px;
+      margin-inline: auto;
+      border-radius: 2px;
+      overflow: hidden;
+      border: 1px solid #E5E7EB;
+    }
+
+    .wa-header {
+      background: #075E54;
+      color: #FFFFFF;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .wa-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #E8B931;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      color: #1A1A2E;
+      flex-shrink: 0;
+    }
+
+    .wa-header-info {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.3;
+    }
+
+    .wa-header-name {
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .wa-header-status {
+      font-size: 12px;
+      opacity: 0.8;
+    }
+
+    .wa-body {
+      background: #ECE5DD;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-height: 260px;
+    }
+
+    .wa-msg {
+      max-width: 80%;
+      padding: 8px 12px;
+      font-size: 14px;
+      line-height: 1.5;
+      position: relative;
+    }
+
+    .wa-msg-in {
+      background: #FFFFFF;
+      align-self: flex-start;
+      border-radius: 0 8px 8px 8px;
+    }
+
+    .wa-msg-out {
+      background: #DCF8C6;
+      align-self: flex-end;
+      border-radius: 8px 0 8px 8px;
+    }
+
+    .wa-time {
+      font-size: 11px;
+      color: #999;
+      text-align: left;
+      margin-top: 4px;
+      direction: ltr;
+    }
+
+    .wa-msg-out .wa-time {
+      text-align: right;
+    }
+
+    /* ===== Problem Section ===== */
+    .problem {
+      background: #F8F8FA;
+    }
+
+    .problem h2 {
+      margin-bottom: 48px;
+    }
+
+    .pain-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .pain-card {
+      background: #FFFFFF;
+      border: 1px solid #E5E7EB;
+      border-radius: 2px;
+      padding: 32px;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    /* ===== Solution Section ===== */
+    .solution {
+      background: #FFFFFF;
+    }
+
+    .solution h2 {
+      margin-bottom: 48px;
+    }
+
+    .solution-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .solution-card {
+      background: #F8F8FA;
+      border-radius: 2px;
+      padding: 32px;
+    }
+
+    .solution-icon {
+      font-size: 36px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .solution-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #1A1A2E;
+    }
+
+    .solution-card p {
+      font-size: 16px;
+      color: #4B5563;
+      line-height: 1.6;
+    }
+
+    /* ===== AI Agent Section ===== */
+    .ai-agent {
+      background: #1A1A2E;
+      color: #FFFFFF;
+    }
+
+    .ai-agent-inner {
+      max-width: 800px;
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .ai-agent h2 {
+      margin-bottom: 24px;
+    }
+
+    .ai-agent-body {
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 36px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .ai-agent-bullets {
+      list-style: none;
+      text-align: start;
+      display: inline-block;
+    }
+
+    .ai-agent-bullets li {
+      padding: 8px 0;
+      font-size: 18px;
+      line-height: 1.6;
+      position: relative;
+      padding-inline-start: 28px;
+    }
+
+    .ai-agent-bullets li::before {
+      content: '';
+      position: absolute;
+      inset-inline-start: 0;
+      top: 18px;
+      width: 10px;
+      height: 10px;
+      background: #E8B931;
+      border-radius: 2px;
+    }
+
+    /* ===== Testimonials ===== */
+    .testimonials {
+      background: #F8F8FA;
+    }
+
+    .testimonials h2 {
+      margin-bottom: 48px;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .testimonial-card {
+      background: #FFFFFF;
+      border-radius: 2px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .testimonial-quote-mark {
+      font-size: 48px;
+      font-weight: 700;
+      color: #E8B931;
+      line-height: 1;
+      margin-bottom: 12px;
+      font-family: Georgia, serif;
+    }
+
+    .testimonial-text {
+      font-size: 16px;
+      font-style: italic;
+      line-height: 1.7;
+      color: #374151;
+      margin-bottom: 24px;
+      flex-grow: 1;
+    }
+
+    .testimonial-name {
+      font-weight: 700;
+      font-size: 16px;
+      color: #1A1A2E;
+    }
+
+    .testimonial-role {
+      font-size: 14px;
+      color: #6B7280;
+    }
+
+    /* ===== Who It's For ===== */
+    .who {
+      background: #FFFFFF;
+    }
+
+    .who h2 {
+      margin-bottom: 48px;
+    }
+
+    .who-tiles {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .who-tile {
+      background: #F8F8FA;
+      border-radius: 2px;
+      padding: 16px 24px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #1A1A2E;
+      white-space: nowrap;
+    }
+
+    /* ===== Lead Form ===== */
+    .lead-form-section {
+      background: #1A1A2E;
+      padding-block: 80px 0;
+    }
+
+    .lead-form-section h2 {
+      color: #FFFFFF;
+      margin-bottom: 16px;
+    }
+
+    .lead-form-sub {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 18px;
+      margin-bottom: 40px;
+      max-width: 600px;
+      margin-inline: auto;
+    }
+
+    .form-container {
+      background: #FFFFFF;
+      max-width: 500px;
+      margin-inline: auto;
+      padding: 40px;
+      border-radius: 2px;
+    }
+
+    .form-field {
+      width: 100%;
+      height: 48px;
+      border: 1px solid #E5E7EB;
+      border-radius: 2px;
+      padding: 0 16px;
+      font-family: 'Heebo', sans-serif;
+      font-size: 16px;
+      color: #1A1A2E;
+      margin-bottom: 16px;
+      direction: rtl;
+      appearance: none;
+      -webkit-appearance: none;
+      background: #FFFFFF;
+    }
+
+    .form-field::placeholder {
+      color: #9CA3AF;
+    }
+
+    .form-field:focus {
+      outline: none;
+      border-color: #1A1A2E;
+    }
+
+    select.form-field {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236B7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: left 16px center;
+      padding-inline-end: 16px;
+      padding-inline-start: 40px;
+    }
+
+    .form-submit {
+      width: 100%;
+      height: 52px;
+      background: #E8B931;
+      color: #1A1A2E;
+      border: none;
+      border-radius: 2px;
+      font-family: 'Heebo', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: opacity 0.2s ease;
+      margin-bottom: 16px;
+    }
+
+    .form-submit:hover {
+      opacity: 0.88;
+    }
+
+    .form-privacy {
+      font-size: 13px;
+      color: #6B7280;
+      text-align: center;
+    }
+
+    /* ===== Footer ===== */
+    .footer {
+      background: #1A1A2E;
+      padding-block: 40px 48px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-copy {
+      font-size: 14px;
+      color: #9CA3AF;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-links a {
+      font-size: 14px;
+      color: #9CA3AF;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: #FFFFFF;
+    }
+
+    /* ===== Mobile ===== */
+    @media (max-width: 1024px) {
+      .solution-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        font-size: 16px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+
+      .section-padding {
+        padding-block: 48px;
+      }
+
+      /* Nav mobile */
+      .nav-brand {
+        font-size: 20px;
+      }
+
+      .nav .btn {
+        padding: 8px 20px;
+        font-size: 14px;
+      }
+
+      /* Hero mobile */
+      .hero {
+        padding-block: 48px 40px;
+      }
+
+      .hero-sub {
+        font-size: 17px;
+      }
+
+      .btn-gold-lg {
+        font-size: 17px;
+        padding: 16px 36px;
+      }
+
+      /* Problem mobile */
+      .pain-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pain-card {
+        font-size: 16px;
+        padding: 24px;
+      }
+
+      /* Solution mobile */
+      .solution-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .solution-card {
+        padding: 24px;
+      }
+
+      /* Testimonials mobile */
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      /* Who tiles mobile */
+      .who-tiles {
+        gap: 8px;
+      }
+
+      .who-tile {
+        padding: 12px 20px;
+        font-size: 15px;
+      }
+
+      /* Form mobile */
+      .lead-form-section {
+        padding-block: 48px 0;
+      }
+
+      .form-container {
+        padding: 28px 24px;
+        margin-inline: 16px;
+        max-width: none;
+      }
+
+      /* Footer mobile */
+      .footer .container {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+      }
+
+      .footer-links {
+        gap: 16px;
+      }
+
+      /* WhatsApp mockup mobile */
+      .whatsapp-mockup {
+        max-width: 340px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 28px;
+      }
+
+      .whatsapp-mockup {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Nav ===== -->
+  <nav class="nav">
+    <div class="container">
+      <span class="nav-brand">AI-לעסק</span>
+      <a href="#lead-form" class="btn btn-primary">השאר פרטים</a>
+    </div>
+  </nav>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <p class="hero-pre">בעל עסק? יש לך עוזר חדש.</p>
+        <h1>תפסיק לרדוף אחרי לקוחות. תתחיל לעבוד.</h1>
+        <p class="hero-sub">מערכת שלמה שעונה בוואטסאפ, קובעת תורים, שולחת תזכורות ומנהלת את הכסף — כדי שאתה תעשה את מה שאתה באמת יודע לעשות.</p>
+        <div class="hero-cta-wrap">
+          <a href="#lead-form" class="btn btn-gold-lg">השאר פרטים — נחזור אליך תוך 24 שעות</a>
+        </div>
+        <p class="hero-reassurance">בלי התחייבות, בלי כרטיס אשראי. שיחת היכרות של 15 דקות.</p>
+      </div>
+
+      <!-- WhatsApp Mockup -->
+      <div class="whatsapp-mockup">
+        <div class="wa-header">
+          <div class="wa-avatar">AI</div>
+          <div class="wa-header-info">
+            <span class="wa-header-name">סטודיו יופי — נציג AI</span>
+            <span class="wa-header-status">מקוון</span>
+          </div>
+        </div>
+        <div class="wa-body">
+          <div class="wa-msg wa-msg-out">
+            היי, יש לכם תור פנוי השבוע?
+            <div class="wa-time">09:41</div>
+          </div>
+          <div class="wa-msg wa-msg-in">
+            היי! בטח 😊 יש לנו מקום ביום שלישי ב-10:00, רביעי ב-14:00 או חמישי ב-11:00. מה מתאים לך?
+            <div class="wa-time">09:41</div>
+          </div>
+          <div class="wa-msg wa-msg-out">
+            רביעי ב-14:00 מעולה
+            <div class="wa-time">09:42</div>
+          </div>
+          <div class="wa-msg wa-msg-in">
+            מצוין! נקבע לך רביעי ב-14:00. תקבלי תזכורת יום לפני. נתראה! ✨
+            <div class="wa-time">09:42</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Problem ===== -->
+  <section class="problem section-padding">
+    <div class="container">
+      <h2 class="text-center">מכירים את היום הזה?</h2>
+      <div class="pain-grid">
+        <div class="pain-card">הטלפון מצלצל באמצע טיפול. אתה לא עונה. הלקוח הולך למתחרה.</div>
+        <div class="pain-card">יומן בפתקים, תורים בוואטסאפ, תשלומים בטאבלה. אתה מנהל חמישה מקומות שונים ואף אחד מהם לא מדבר עם השני.</div>
+        <div class="pain-card">סוף חודש. אתה יושב שעתיים לספור מי שילם ומי לא. חצי מהלקוחות אומרים "שלחתי העברה" ואתה לא מוצא אותה.</div>
+        <div class="pain-card">ביטלו תור ברגע האחרון. החלון נשאר ריק. אף אחד לא יודע שהתפנה מקום.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Solution ===== -->
+  <section class="solution section-padding">
+    <div class="container">
+      <h2 class="text-center">הלקוחות שלך מקבלים מענה גם כשאתה באמצע טיפול</h2>
+      <div class="solution-grid">
+        <div class="solution-card">
+          <span class="solution-icon">📱</span>
+          <h3>נציג וואטסאפ</h3>
+          <p>לקוחות שולחים הודעה — מקבלים תשובה מיידית. קביעת תורים, מחירון, שאלות נפוצות — בלי שתרים את הטלפון.</p>
+        </div>
+        <div class="solution-card">
+          <span class="solution-icon">🌐</span>
+          <h3>אתר ודף נחיתה</h3>
+          <p>לקוחות מחפשים אותך בגוגל — מוצאים דף שנראה כאילו שילמת עליו 10,000 ש"ח. זה כלול.</p>
+        </div>
+        <div class="solution-card">
+          <span class="solution-icon">📅</span>
+          <h3>יומן חכם</h3>
+          <p>לקוחות קובעים תורים לבד, המערכת חוסמת כפילויות, ואם מישהו מבטל — הבא בתור מקבל הודעה אוטומטית.</p>
+        </div>
+        <div class="solution-card">
+          <span class="solution-icon">👥</span>
+          <h3>ניהול לקוחות</h3>
+          <p>כל לקוח — כרטיס אחד. היסטוריית ביקורים, העדפות, הערות. לא פתקים על השולחן.</p>
+        </div>
+        <div class="solution-card">
+          <span class="solution-icon">💰</span>
+          <h3>חשבוניות ותשלומים</h3>
+          <p>הפקת חשבונית בלחיצה, תזכורת אוטומטית למי שלא שילם, ודוח הכנסות חודשי שמגיע לבד.</p>
+        </div>
+        <div class="solution-card">
+          <span class="solution-icon">🔔</span>
+          <h3>תזכורות אוטומטיות</h3>
+          <p>תזכורת תור יום לפני. תזכורת תשלום. הודעת "מתגעגעים" ללקוחות שלא היו 3 חודשים. הכל רץ לבד.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AI Agent ===== -->
+  <section class="ai-agent section-padding">
+    <div class="container">
+      <div class="ai-agent-inner">
+        <h2>תשאל "כמה הרווחתי החודש?" ותקבל תשובה תוך שניות</h2>
+        <p class="ai-agent-body">סוכן שמכיר את העסק שלך ועונה בשפה רגילה. שואל אותו "למה פברואר היה חלש?" — ומקבל תשובה עם מספרים, לא גרפים שאתה צריך לפענח.</p>
+        <ul class="ai-agent-bullets">
+          <li>רואה שביום שלישי אחרי 16:00 יש לך 40% ביטולים — ומציע לקצר את החלון</li>
+          <li>שם לב שלקוחות חדשים לא חוזרים אחרי ביקור ראשון — מציע לשלוח הודעת מעקב</li>
+          <li>מחשב כמה כסף אתה מפסיד על חלונות ריקים בחודש ומראה לך את המספר</li>
+          <li>עוזר לקבל החלטות — מחירון, שעות פעילות, הרחבה — על סמך נתונים אמיתיים</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Testimonials ===== -->
+  <section class="testimonials section-padding">
+    <div class="container">
+      <h2 class="text-center">מה אומרים בעלי עסקים</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-quote-mark">"</div>
+          <p class="testimonial-text">משנה חיים. נקודה.</p>
+          <div>
+            <div class="testimonial-name">ד"ר אמיר כהן</div>
+            <div class="testimonial-role">רופא שיניים, מרפאה פרטית — חיפה</div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-quote-mark">"</div>
+          <p class="testimonial-text">הלקוחה שלי דליה מגיעה כל שלישי. פעם הייתי צריכה לחזור אליה ב-11 בלילה לאשר תור. עכשיו היא קובעת לבד מהוואטסאפ ואני ישנה בשקט.</p>
+          <div>
+            <div class="testimonial-name">ענבל לוי</div>
+            <div class="testimonial-role">קוסמטיקאית — כרמיאל</div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-quote-mark">"</div>
+          <p class="testimonial-text">אני בשטח כל היום. ידיים מלוכלכות, טלפון בכיס. אין מצב שאני עוצר באמצע עבודה לענות. המערכת עונה במקומי ואני רק מגיע למקום הבא.</p>
+          <div>
+            <div class="testimonial-name">מוחמד ג'בארין</div>
+            <div class="testimonial-role">אינסטלטור — נצרת</div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-quote-mark">"</div>
+          <p class="testimonial-text">בחודש הראשון גיליתי שאני מפסידה 3,200 ש"ח על ביטולים. הדוח הראה לי את זה. שינינו את מדיניות הביטולים ותוך חודש זה ירד בחצי.</p>
+          <div>
+            <div class="testimonial-name">מיטל אברהם</div>
+            <div class="testimonial-role">פסיכולוגית קלינית — באר שבע</div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-quote-mark">"</div>
+          <p class="testimonial-text">חצי שעה התקנה. אני רצינית. חצי שעה.</p>
+          <div>
+            <div class="testimonial-name">רותי פרץ</div>
+            <div class="testimonial-role">בעלת מספרה — עפולה</div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-quote-mark">"</div>
+          <p class="testimonial-text">יש לי 35 תלמידים קבועים. ביטולי רגע אחרון היו שוחקים אותי. מאז שהמערכת שולחת הודעה אוטומטית לבא בתור — אני סוגר חודש עם חלון ריק אחד במקום שבעה.</p>
+          <div>
+            <div class="testimonial-name">יוסי מזרחי</div>
+            <div class="testimonial-role">מורה פרטי למתמטיקה — ראשון לציון</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Who It's For ===== -->
+  <section class="who section-padding">
+    <div class="container">
+      <h2 class="text-center">אם יש לך תורים, לקוחות שמבטלים, ואתה עונה לוואטסאפ באמצע העבודה — בנינו את זה בשבילך</h2>
+      <div class="who-tiles">
+        <span class="who-tile">רופאים ומרפאות</span>
+        <span class="who-tile">קוסמטיקאיות</span>
+        <span class="who-tile">מספרות</span>
+        <span class="who-tile">פסיכולוגים ומטפלים</span>
+        <span class="who-tile">פיזיותרפיסטים</span>
+        <span class="who-tile">סטודיואים לכושר ויוגה</span>
+        <span class="who-tile">שירותי בית (אינסטלציה, חשמל, מיזוג)</span>
+        <span class="who-tile">עורכי דין</span>
+        <span class="who-tile">מורים פרטיים</span>
+        <span class="who-tile">רואי חשבון</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Lead Form ===== -->
+  <section id="lead-form" class="lead-form-section">
+    <div class="container text-center">
+      <h2>רוצה לראות איך זה עובד על העסק שלך?</h2>
+      <p class="lead-form-sub">משאיר פרטים — מקבל שיחה קצרה של 15 דקות. נראה לך בדיוק מה המערכת עושה עם סוג העסק שלך.</p>
+      <div class="form-container">
+        <form>
+          <input type="text" class="form-field" placeholder="שם מלא" autocomplete="name">
+          <input type="tel" class="form-field" placeholder="טלפון" autocomplete="tel">
+          <select class="form-field">
+            <option value="" disabled selected>סוג העסק</option>
+            <option value="medical">רפואה / מרפאה</option>
+            <option value="beauty">יופי וטיפוח</option>
+            <option value="hair">מספרה</option>
+            <option value="therapy">טיפול נפשי</option>
+            <option value="physio">פיזיותרפיה / רפואה משלימה</option>
+            <option value="fitness">כושר / יוגה / פילאטיס</option>
+            <option value="home">שירותי בית</option>
+            <option value="consulting">ייעוץ / עריכת דין / ראיית חשבון</option>
+            <option value="teaching">הוראה פרטית</option>
+            <option value="other">אחר</option>
+          </select>
+          <input type="text" class="form-field" placeholder="עיר" autocomplete="address-level2">
+          <button type="button" class="form-submit">שלח פרטים</button>
+          <p class="form-privacy">לא נשלח ספאם. זה לא בסגנון שלנו.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <span class="footer-copy">&copy; 2026 AI-לעסק. כל הזכויות שמורות.</span>
+      <div class="footer-links">
+        <a href="#">תנאי שימוש</a>
+        <a href="#">מדיניות פרטיות</a>
+        <a href="#">צור קשר</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
