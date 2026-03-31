@@ -163,7 +163,7 @@ ul { list-style: none; }
 }
 
 .nav-logo {
-  height: 44px;
+  height: 88px;
   width: auto;
 }
 
@@ -1047,6 +1047,15 @@ ul { list-style: none; }
 .product-mockup-green {
   background: linear-gradient(135deg, #2D8F5E, #16a34a);
   box-shadow: 0 12px 40px rgba(45, 143, 94, 0.25);
+}
+
+.solution-photo {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 16px;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
 }
 
 /* ===== Responsive ===== */
