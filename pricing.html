@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>מחירון — AI-לעסק</title>
+  <meta name="description" content="מחירון שקוף — שלוש חבילות, בלי הפתעות. מתחילים מ-149 ש״ח לחודש. כולל הקמה חינם.">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Nav ===== -->
+  <nav class="nav">
+    <div class="container-wide">
+      <a href="index.html" class="nav-brand">
+        <img src="logo.png" alt="AI-לעסק" class="nav-logo">
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">ראשי</a>
+        <a href="products.html" class="nav-link">המוצרים</a>
+        <a href="solutions.html" class="nav-link">פתרונות</a>
+        <a href="pricing.html" class="nav-link active">מחירון</a>
+        <a href="about.html" class="nav-link">מי אנחנו</a>
+        <a href="contact.html" class="nav-link">צרו קשר</a>
+      </div>
+      <div class="nav-actions">
+        <a href="#" class="nav-login">כבר לקוח? התחבר</a>
+        <a href="#lead-form" class="btn btn-primary btn-sm">לשיחת היכרות חינם</a>
+      </div>
+      <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="תפריט">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== Page Header ===== -->
+  <section class="page-header" style="background-image: url('assets/images/hero-bg.jpg');">
+    <div class="container">
+      <p class="hero-breadcrumb"><a href="index.html">ראשי</a> &laquo; מחירון</p>
+      <h1>מחירון שקוף</h1>
+      <h3>שלוש חבילות. בלי אותיות קטנות, בלי הפתעות בחשבון.</h3>
+    </div>
+  </section>
+
+  <!-- ===== Pricing Cards ===== -->
+  <section class="section-padding" style="background:#f8fafc;">
+    <div class="container">
+      <h2 class="text-center" style="margin-bottom:12px;">בחרו את החבילה שמתאימה לכם</h2>
+      <p class="text-center" style="color:#64748b; font-size:17px; margin-bottom:56px; max-width:560px; margin-inline:auto;">כל החבילות כוללות הקמה חינם, הדרכה אישית, ותמיכה שוטפת. בלי התחייבות שנתית.</p>
+
+      <div class="pricing-grid">
+        <!-- Starter -->
+        <div class="pricing-card">
+          <h3>סטארטר</h3>
+          <p style="color:#64748b; font-size:15px;">לעסק שרק מתחיל לעבוד חכם</p>
+          <div class="pricing-price">149<span> ש״ח/חודש</span></div>
+          <p class="pricing-period">ללא התחייבות. ביטול בכל עת.</p>
+          <ul class="pricing-features">
+            <li>נציג וואטסאפ — עד 200 שיחות בחודש</li>
+            <li>יומן חכם — קביעת תורים אונליין</li>
+            <li>ניהול לקוחות בסיסי</li>
+            <li>תזכורות תור אוטומטיות</li>
+            <li>תמיכה בוואטסאפ</li>
+          </ul>
+          <a href="#lead-form" class="btn btn-secondary" style="width:100%;">להתחיל</a>
+        </div>
+
+        <!-- Pro (Featured) -->
+        <div class="pricing-card featured" data-badge="הכי פופולרי">
+          <h3>פרו</h3>
+          <p style="color:#64748b; font-size:15px;">לעסק שרוצה לגדול בלי להוסיף כוח אדם</p>
+          <div class="pricing-price">299<span> ש״ח/חודש</span></div>
+          <p class="pricing-period">ללא התחייבות. ביטול בכל עת.</p>
+          <ul class="pricing-features">
+            <li>כל מה שבסטארטר, ובנוסף:</li>
+            <li>נציג וואטסאפ — ללא הגבלת שיחות</li>
+            <li>אתר עסקי מקצועי</li>
+            <li>חשבוניות ותשלומים</li>
+            <li>תזכורות מתקדמות (תשלום + "מתגעגעים")</li>
+            <li>יועץ עסקי AI</li>
+            <li>דוחות חודשיים אוטומטיים</li>
+          </ul>
+          <a href="#lead-form" class="btn btn-primary" style="width:100%;">להתחיל</a>
+        </div>
+
+        <!-- Business -->
+        <div class="pricing-card">
+          <h3>ביזנס</h3>
+          <p style="color:#64748b; font-size:15px;">לעסק עם צוות, מספר סניפים, או נפח גבוה</p>
+          <div class="pricing-price">499<span> ש״ח/חודש</span></div>
+          <p class="pricing-period">ללא התחייבות. ביטול בכל עת.</p>
+          <ul class="pricing-features">
+            <li>כל מה שבפרו, ובנוסף:</li>
+            <li>ריבוי משתמשים — עד 5 אנשי צוות</li>
+            <li>ניהול סניפים</li>
+            <li>API לחיבור מערכות חיצוניות</li>
+            <li>יועץ עסקי מתקדם עם המלצות אישיות</li>
+            <li>מנהל הצלחת לקוח אישי</li>
+            <li>תמיכה בטלפון + זום</li>
+          </ul>
+          <a href="#lead-form" class="btn btn-secondary" style="width:100%;">להתחיל</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== All Plans Include ===== -->
+  <section class="section-padding" style="background:#FFFFFF;">
+    <div class="container text-center">
+      <h2 style="margin-bottom:48px;">כל החבילות כוללות</h2>
+      <div class="features-grid features-grid-5" style="max-width:900px; margin:0 auto;">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <img src="assets/icons/icon-support.svg" alt="">
+          </div>
+          <h4>הקמה חינם</h4>
+          <p>הצוות שלנו מקים לכם הכל. אתם לא צריכים לדעת טכנולוגיה.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <img src="assets/icons/icon-chat.svg" alt="">
+          </div>
+          <h4>תמיכה שוטפת</h4>
+          <p>יש שאלה? יש מי שעונה. בוואטסאפ, בטלפון, ובזום.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <img src="assets/icons/icon-calendar.svg" alt="">
+          </div>
+          <h4>בלי התחייבות</h4>
+          <p>חודש בחודש. לא מתאים? מבטלים בלחיצה. בלי קנסות.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section-padding" style="background:#f8fafc;">
+    <div class="container" style="max-width:800px;">
+      <h2 class="text-center" style="margin-bottom:48px;">שאלות נפוצות</h2>
+
+      <div class="faq-item">
+        <h4 class="faq-question">יש תקופת ניסיון?</h4>
+        <p class="faq-answer">כן. 14 ימי ניסיון חינם על חבילת פרו. לא צריך כרטיס אשראי כדי להתחיל.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4 class="faq-question">מה קורה אם אני רוצה לשנות חבילה?</h4>
+        <p class="faq-answer">משדרגים או מורידים בכל רגע מאזור הלקוחות. השינוי נכנס לתוקף מיידית.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4 class="faq-question">יש התחייבות שנתית?</h4>
+        <p class="faq-answer">לא. חודש בחודש. רוצים להפסיק? לוחצים כפתור. בלי שיחות שכנוע, בלי קנסות.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4 class="faq-question">כמה זמן לוקחת ההקמה?</h4>
+        <p class="faq-answer">בדרך כלל 24-48 שעות. אנחנו מקימים, אתם רק בודקים ומאשרים.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4 class="faq-question">אני לא טכנולוגי/ת. זה בעיה?</h4>
+        <p class="faq-answer">בכלל לא. יש לנו לקוחות שלא יודעים מה זה CRM וזה עובד להם מצוין. הצוות שלנו מקים הכל, מדריך, ונשאר בקשר.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4 class="faq-question">מה אם יש לי צרכים מיוחדים?</h4>
+        <p class="faq-answer">דברו איתנו. אנחנו מתאימים את המערכת לסוג העסק — מרפאה עובדת אחרת ממספרה, ואנחנו יודעים את ההבדל.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Lead Form ===== -->
+  <section id="lead-form" class="lead-form-section section-padding">
+    <div class="container text-center">
+      <h2>רוצים להתחיל?</h2>
+      <p class="lead-form-sub">משאירים פרטים — מקבלים שיחה קצרה של 15 דקות. נתאים לכם את החבילה הנכונה.</p>
+      <div class="form-container">
+        <form>
+          <input type="text" class="form-field" placeholder="השם שלכם" autocomplete="name">
+          <input type="tel" class="form-field" placeholder="050-0000000" autocomplete="tel">
+          <select class="form-field">
+            <option value="" disabled selected>סוג העסק</option>
+            <option value="medical">רפואה / מרפאה</option>
+            <option value="beauty">יופי וטיפוח</option>
+            <option value="hair">מספרה</option>
+            <option value="therapy">טיפול נפשי</option>
+            <option value="physio">פיזיותרפיה / רפואה משלימה</option>
+            <option value="fitness">כושר / יוגה / פילאטיס</option>
+            <option value="home">שירותי בית</option>
+            <option value="consulting">ייעוץ / עריכת דין / ראיית חשבון</option>
+            <option value="teaching">הוראה פרטית</option>
+            <option value="other">אחר</option>
+          </select>
+          <input type="text" class="form-field" placeholder="באיזו עיר העסק" autocomplete="address-level2">
+          <button type="button" class="form-submit">שלחו פרטים — נחזור אליכם היום</button>
+          <p class="form-privacy">הפרטים שלכם נשמרים אצלנו בלבד. לא נשתף אותם ולא נשלח ספאם. זה לא בסגנון שלנו.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:40px;">
+        <img src="logo.png" alt="AI-לעסק" style="height:48px; margin:0 auto 8px; filter: brightness(0) invert(1); opacity:0.9;">
+        <p style="font-size:14px; color:#64748b;">עסק שעובד בשבילכם</p>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>על המוצר</h4>
+          <ul>
+            <li><a href="products.html#whatsapp">נציג וואטסאפ</a></li>
+            <li><a href="products.html#calendar">יומן חכם</a></li>
+            <li><a href="products.html#website">אתר ודף נחיתה</a></li>
+            <li><a href="products.html#crm">ניהול לקוחות</a></li>
+            <li><a href="products.html#invoices">חשבוניות ותשלומים</a></li>
+            <li><a href="products.html#reminders">תזכורות אוטומטיות</a></li>
+            <li><a href="products.html#advisor">יועץ עסקי</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>כללי</h4>
+          <ul>
+            <li><a href="pricing.html">מחירון</a></li>
+            <li><a href="about.html">מי אנחנו</a></li>
+            <li><a href="#">שאלות נפוצות</a></li>
+            <li><a href="#">תנאי שימוש</a></li>
+            <li><a href="#">מדיניות פרטיות</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>פרטי התקשרות</h4>
+          <ul>
+            <li><a href="mailto:hello@ai-laesek.co.il">hello@ai-laesek.co.il</a></li>
+            <li><a href="#" style="color:#0891B2;">דברו איתנו בוואטסאפ</a></li>
+            <li>ראשון–חמישי, 9:00–18:00</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 AI-לעסק. כל הזכויות שמורות.</span>
+        <span></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== WhatsApp Float ===== -->
+  <a href="#" class="wa-float" aria-label="WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+</body>
+</html>

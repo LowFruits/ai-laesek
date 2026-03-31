@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>פתרונות לפי תחום — AI-לעסק</title>
+  <meta name="description" content="פתרונות AI מותאמים לרופאים, קוסמטיקאיות, מספרות, פסיכולוגים, עורכי דין, מורים פרטיים ועוד.">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Nav ===== -->
+  <nav class="nav">
+    <div class="container-wide">
+      <a href="index.html" class="nav-brand">
+        <img src="logo.png" alt="AI-לעסק" class="nav-logo">
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">ראשי</a>
+        <a href="products.html" class="nav-link">המוצרים</a>
+        <a href="solutions.html" class="nav-link active">פתרונות</a>
+        <a href="pricing.html" class="nav-link">מחירון</a>
+        <a href="about.html" class="nav-link">מי אנחנו</a>
+        <a href="contact.html" class="nav-link">צרו קשר</a>
+      </div>
+      <div class="nav-actions">
+        <a href="#" class="nav-login">כבר לקוח? התחבר</a>
+        <a href="#lead-form" class="btn btn-primary btn-sm">לשיחת היכרות חינם</a>
+      </div>
+      <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="תפריט">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== Page Header ===== -->
+  <section class="page-header" style="background-image: url('assets/images/hero-bg.jpg');">
+    <div class="container">
+      <p class="hero-breadcrumb"><a href="index.html">ראשי</a> &laquo; פתרונות</p>
+      <h1>פתרונות לפי תחום</h1>
+      <h3>כל עסק שונה. המערכת יודעת את ההבדל ומתאימה את עצמה.</h3>
+    </div>
+  </section>
+
+  <!-- ===== Intro ===== -->
+  <section class="section-padding" style="background:#FFFFFF;">
+    <div class="container text-center">
+      <h2>בחרו את התחום שלכם</h2>
+      <p style="color:#64748b; font-size:18px; margin-bottom:40px;">לחצו כדי לראות איך המערכת עובדת בדיוק עם סוג העסק שלכם</p>
+      <div class="tabs">
+        <a href="#medical" class="tab active">רופאים ומרפאות</a>
+        <a href="#beauty" class="tab">קוסמטיקה ויופי</a>
+        <a href="#hair" class="tab">מספרות</a>
+        <a href="#therapy" class="tab">פסיכולוגים ומטפלים</a>
+        <a href="#law" class="tab">עורכי דין</a>
+        <a href="#home-services" class="tab">שירותי בית</a>
+        <a href="#teaching" class="tab">מורים פרטיים</a>
+        <a href="#fitness" class="tab">כושר ויוגה</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Solution: Medical ===== -->
+  <section id="medical" class="product-section section-padding">
+    <div class="container">
+      <div class="product-row">
+        <div class="product-text">
+          <h3>רופאים ומרפאות</h3>
+          <p class="product-tagline">המטופלים שלכם לא צריכים לחכות על הקו. ואתם לא צריכים מזכירה 24/7.</p>
+          <p>מרפאה פרטית מנהלת עשרות פניות ביום — קביעת תורים, ביטולים, שאלות על שעות, הפניות. הנציג הוירטואלי עונה מיידית בוואטסאפ, קובע תורים, ושולח תזכורות. אתם מתרכזים ברפואה.</p>
+          <ul class="product-benefits">
+            <li>תורים מתמלאים לבד — פחות חלונות ריקים, יותר הכנסה</li>
+            <li>תזכורת 24 שעות לפני — מפחיתה No-Show ב-60%</li>
+            <li>חשבוניות מס יוצאות אוטומטית אחרי כל ביקור</li>
+            <li>דוח חודשי — רואים בדיוק כמה ביקורים, הכנסה, וביטולים</li>
+          </ul>
+        </div>
+        <div class="product-visual">
+          <div class="product-mockup">
+            <img src="assets/icons/icon-chat.svg" alt="" style="width:80px; height:80px; filter:brightness(0) invert(1);">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Solution: Beauty ===== -->
+  <section id="beauty" class="product-section product-section-alt section-padding">
+    <div class="container">
+      <div class="product-row product-row-reverse">
+        <div class="product-text">
+          <h3>קוסמטיקה וסטודיו יופי</h3>
+          <p class="product-tagline">הלקוחות קובעות לבד. אתן מטפלות — לא עונות לטלפון.</p>
+          <p>סטודיו יופי חי על תורים. כשלקוחה מנסה לקבוע ב-11 בלילה ולא מקבלת תשובה — היא הולכת למקום אחר. הנציג עונה מיד, מציע שעות פנויות, ומאשר. בבוקר אתן מגיעות ליומן מלא.</p>
+          <ul class="product-benefits">
+            <li>קביעת תורים 24/7 — גם כשאתן באמצע טיפול</li>
+            <li>כרטיס לקוחה עם העדפות — "לא אוהבת ג'ל", "רגישה לריחות"</li>
+            <li>הודעת "מתגעגעים" אחרי 3 חודשים — מחזירה לקוחות ישנות</li>
+            <li>רשימת המתנה שממלאת ביטולי רגע אחרון</li>
+          </ul>
+        </div>
+        <div class="product-visual">
+          <div class="product-mockup product-mockup-green">
+            <img src="assets/icons/icon-calendar.svg" alt="" style="width:80px; height:80px; filter:brightness(0) invert(1);">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Solution: Hair ===== -->
+  <section id="hair" class="product-section section-padding">
+    <div class="container">
+      <div class="product-row">
+        <div class="product-text">
+          <h3>מספרות</h3>
+          <p class="product-tagline">תספורת לוקחת 30 דקות. ניהול תורים לא צריך לקחת אפילו דקה.</p>
+          <p>בעלי מספרות עובדים עם ידיים כל היום. אין זמן לענות לטלפון בין לקוח ללקוח. המערכת מנהלת את היומן, עונה ללקוחות, ושולחת תזכורות — ואתם פשוט גוזרים.</p>
+          <ul class="product-benefits">
+            <li>לקוחות קובעים תור מהוואטסאפ — לא צריך להרים טלפון</li>
+            <li>יומן שמראה את כל הספרים — מי פנוי, מתי, ולאיזה שירות</li>
+            <li>אתר מקצועי עם גלריית עבודות וטופס פניות</li>
+            <li>חשבוניות בלחיצה אחרי כל תספורת</li>
+          </ul>
+        </div>
+        <div class="product-visual">
+          <div class="product-mockup">
+            <img src="assets/icons/icon-users.svg" alt="" style="width:80px; height:80px; filter:brightness(0) invert(1);">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Solution: Therapy ===== -->
+  <section id="therapy" class="product-section product-section-alt section-padding">
+    <div class="container">
+      <div class="product-row product-row-reverse">
+        <div class="product-text">
+          <h3>פסיכולוגים ומטפלים</h3>
+          <p class="product-tagline">המטופלים שלכם צריכים רגישות. ניהול העסק לא צריך להיות מסובך.</p>
+          <p>מטפלים עובדים שעה-שעה. כל ביטול הוא הפסד ישיר. המערכת שולחת תזכורות, מנהלת רשימת המתנה, ומראה לכם בדיוק כמה הפסדתם על ביטולים — כדי שתדעו מתי לשנות מדיניות.</p>
+          <ul class="product-benefits">
+            <li>תזכורת תור מנוסחת ברגישות — לא "יש לך תור", אלא "תזכורת לפגישה שלך מחר"</li>
+            <li>דוח ביטולים חודשי — רואים בדיוק כמה הפסדתם ולמה</li>
+            <li>כרטיס מטופל עם הערות פרטיות — נגישות מיידית לפני כל פגישה</li>
+            <li>חשבוניות אוטומטיות — סוף חודש לוקח 5 דקות</li>
+          </ul>
+        </div>
+        <div class="product-visual">
+          <div class="product-mockup product-mockup-green">
+            <img src="assets/icons/icon-brain.svg" alt="" style="width:80px; height:80px; filter:brightness(0) invert(1);">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Solution: Law ===== -->
+  <section id="law" class="product-section section-padding">
+    <div class="container">
+      <div class="product-row">
+        <div class="product-text">
+          <h3>עורכי דין</h3>
+          <p class="product-tagline">הלקוחות שלכם רוצים מענה מהיר. לא תא קולי.</p>
+          <p>משרד עורכי דין שלא עונה — מפסיד לקוחות פוטנציאליים. הנציג עונה מיד בוואטסאפ, אוסף פרטים ראשוניים, ומתאם פגישת ייעוץ. אתם מקבלים ליד מסודר עם כל המידע.</p>
+          <ul class="product-benefits">
+            <li>נציג שאוסף פרטים ראשוניים — שם, תחום, דחיפות</li>
+            <li>קביעת פגישות ייעוץ ראשוניות אוטומטית</li>
+            <li>CRM עם היסטוריית לקוחות ותיקים</li>
+            <li>חשבוניות מסודרות — ריטיינר, שעות, או פרויקט</li>
+          </ul>
+        </div>
+        <div class="product-visual">
+          <div class="product-mockup">
+            <img src="assets/icons/icon-invoice.svg" alt="" style="width:80px; height:80px; filter:brightness(0) invert(1);">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Solution: Home Services ===== -->
+  <section id="home-services" class="product-section product-section-alt section-padding">
+    <div class="container">
+      <div class="product-row product-row-reverse">
+        <div class="product-text">
+          <h3>שירותי בית</h3>
+          <p class="product-tagline">אתם בשטח כל היום. המערכת עונה במקומכם.</p>
+          <p>אינסטלטורים, חשמלאים, מנעולנים — ידיים מלוכלכות, טלפון בכיס. אי אפשר לעצור באמצע עבודה לענות. הנציג עונה, מתאם הגעה, ושולח ללקוח אישור עם כל הפרטים.</p>
+          <ul class="product-benefits">
+            <li>נציג שעונה כשאתם בשטח — לא מפסידים עבודות</li>
+            <li>תיאום הגעה אוטומטי — "מגיע אליכם ביום שלישי בין 10-12"</li>
+            <li>קבלה דיגיטלית בסוף כל עבודה — שולחים ללקוח במקום</li>
+            <li>יועץ עסקי שמראה מאיזה אזור מגיעות הכי הרבה עבודות</li>
+          </ul>
+        </div>
+        <div class="product-visual">
+          <div class="product-mockup product-mockup-green">
+            <img src="assets/icons/icon-support.svg" alt="" style="width:80px; height:80px; filter:brightness(0) invert(1);">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Solution: Teaching ===== -->
+  <section id="teaching" class="product-section section-padding">
+    <div class="container">
+      <div class="product-row">
+        <div class="product-text">
+          <h3>מורים פרטיים</h3>
+          <p class="product-tagline">35 תלמידים, 7 ביטולים בשבוע? לא אצלנו.</p>
+          <p>מורה פרטי עם יומן מלא מפסיד כסף על כל חלון ריק. המערכת שולחת תזכורות, מנהלת רשימת המתנה, ומוודאת שביטול של תלמיד אחד הופך ישר לשיעור של אחר.</p>
+          <ul class="product-benefits">
+            <li>רשימת המתנה שממלאת ביטולים — חלון ריק אחד במקום שבעה</li>
+            <li>תזכורת שיעור יום לפני — להורה ולתלמיד</li>
+            <li>חשבונית חודשית אוטומטית — מסכמת את כל השיעורים</li>
+            <li>דוח שמראה מי הכי מבטל — כדי שתדעו עם מי לדבר</li>
+          </ul>
+        </div>
+        <div class="product-visual">
+          <div class="product-mockup">
+            <img src="assets/icons/icon-bell.svg" alt="" style="width:80px; height:80px; filter:brightness(0) invert(1);">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Solution: Fitness ===== -->
+  <section id="fitness" class="product-section product-section-alt section-padding">
+    <div class="container">
+      <div class="product-row product-row-reverse">
+        <div class="product-text">
+          <h3>כושר ויוגה</h3>
+          <p class="product-tagline">שיעורים מלאים. תשלומים מסודרים. ואתם על המזרן.</p>
+          <p>מאמני כושר ומורות יוגה מנהלים שיעורים קבוצתיים ואישיים. המערכת מנהלת הרשמות, מגבילה מקומות בשיעור, גובה תשלום, ושולחת תזכורות. אתם מתרכזים באימון.</p>
+          <ul class="product-benefits">
+            <li>הרשמה לשיעורים קבוצתיים — עם הגבלת מקומות</li>
+            <li>תשלום חודשי או לפי שיעור — המערכת עוקבת</li>
+            <li>הודעת "מתגעגעים" למתאמנים שנעלמו</li>
+            <li>אתר עם מערכת שעות שמתעדכנת לבד</li>
+          </ul>
+        </div>
+        <div class="product-visual">
+          <div class="product-mockup product-mockup-green">
+            <img src="assets/icons/icon-globe.svg" alt="" style="width:80px; height:80px; filter:brightness(0) invert(1);">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section section-padding">
+    <div class="container">
+      <h2>לא מצאתם את התחום שלכם?</h2>
+      <p>אם יש לכם עסק עם לקוחות ותורים — המערכת מתאימה לכם. דברו איתנו ונתאים.</p>
+      <a href="#lead-form" class="btn btn-white btn-lg">לשיחת הדגמה חינם</a>
+    </div>
+  </section>
+
+  <!-- ===== Lead Form ===== -->
+  <section id="lead-form" class="lead-form-section section-padding">
+    <div class="container text-center">
+      <h2>רוצים לראות איך זה עובד עם העסק שלכם?</h2>
+      <p class="lead-form-sub">משאירים פרטים — מקבלים שיחה קצרה של 15 דקות.</p>
+      <div class="form-container">
+        <form>
+          <input type="text" class="form-field" placeholder="השם שלכם" autocomplete="name">
+          <input type="tel" class="form-field" placeholder="050-0000000" autocomplete="tel">
+          <select class="form-field">
+            <option value="" disabled selected>סוג העסק</option>
+            <option value="medical">רפואה / מרפאה</option>
+            <option value="beauty">יופי וטיפוח</option>
+            <option value="hair">מספרה</option>
+            <option value="therapy">טיפול נפשי</option>
+            <option value="physio">פיזיותרפיה / רפואה משלימה</option>
+            <option value="fitness">כושר / יוגה / פילאטיס</option>
+            <option value="home">שירותי בית</option>
+            <option value="consulting">ייעוץ / עריכת דין / ראיית חשבון</option>
+            <option value="teaching">הוראה פרטית</option>
+            <option value="other">אחר</option>
+          </select>
+          <input type="text" class="form-field" placeholder="באיזו עיר העסק" autocomplete="address-level2">
+          <button type="button" class="form-submit">שלחו פרטים — נחזור אליכם היום</button>
+          <p class="form-privacy">הפרטים שלכם נשמרים אצלנו בלבד. לא נשתף אותם ולא נשלח ספאם.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:40px;">
+        <img src="logo.png" alt="AI-לעסק" style="height:48px; margin:0 auto 8px; filter: brightness(0) invert(1); opacity:0.9;">
+        <p style="font-size:14px; color:#64748b;">עסק שעובד בשבילכם</p>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-col"><h4>על המוצר</h4><ul><li><a href="products.html#whatsapp">נציג וואטסאפ</a></li><li><a href="products.html#calendar">יומן חכם</a></li><li><a href="products.html#website">אתר ודף נחיתה</a></li><li><a href="products.html#crm">ניהול לקוחות</a></li><li><a href="products.html#invoices">חשבוניות ותשלומים</a></li><li><a href="products.html#reminders">תזכורות אוטומטיות</a></li><li><a href="products.html#advisor">יועץ עסקי</a></li></ul></div>
+        <div class="footer-col"><h4>כללי</h4><ul><li><a href="pricing.html">מחירון</a></li><li><a href="about.html">מי אנחנו</a></li><li><a href="#">שאלות נפוצות</a></li><li><a href="#">תנאי שימוש</a></li><li><a href="#">מדיניות פרטיות</a></li></ul></div>
+        <div class="footer-col"><h4>פרטי התקשרות</h4><ul><li><a href="mailto:hello@ai-laesek.co.il">hello@ai-laesek.co.il</a></li><li><a href="#" style="color:#0891B2;">דברו איתנו בוואטסאפ</a></li><li>ראשון–חמישי, 9:00–18:00</li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>&copy; 2026 AI-לעסק. כל הזכויות שמורות.</span><span></span></div>
+    </div>
+  </footer>
+
+  <a href="#" class="wa-float" aria-label="WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>צרו קשר — AI-לעסק</title>
+  <meta name="description" content="רוצים לדבר? השאירו פרטים או שלחו הודעה בוואטסאפ. נחזור אליכם היום.">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Nav ===== -->
+  <nav class="nav">
+    <div class="container-wide">
+      <a href="index.html" class="nav-brand">
+        <img src="logo.png" alt="AI-לעסק" class="nav-logo">
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">ראשי</a>
+        <a href="products.html" class="nav-link">המוצרים</a>
+        <a href="solutions.html" class="nav-link">פתרונות</a>
+        <a href="pricing.html" class="nav-link">מחירון</a>
+        <a href="about.html" class="nav-link">מי אנחנו</a>
+        <a href="contact.html" class="nav-link active">צרו קשר</a>
+      </div>
+      <div class="nav-actions">
+        <a href="#" class="nav-login">כבר לקוח? התחבר</a>
+        <a href="#lead-form" class="btn btn-primary btn-sm">לשיחת היכרות חינם</a>
+      </div>
+      <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="תפריט">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== Page Header ===== -->
+  <section class="page-header" style="background-image: url('assets/images/hero-bg.jpg');">
+    <div class="container">
+      <p class="hero-breadcrumb"><a href="index.html">ראשי</a> &laquo; צרו קשר</p>
+      <h1>צרו קשר</h1>
+      <h3>שאלה? עניין? סתם רוצים לשמוע עוד? אנחנו כאן.</h3>
+    </div>
+  </section>
+
+  <!-- ===== Contact Section ===== -->
+  <section class="section-padding" style="background:#f8fafc;">
+    <div class="container">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start;">
+
+        <!-- Contact Info -->
+        <div>
+          <h2 style="margin-bottom:24px;">דברו איתנו</h2>
+          <p style="color:#64748b; font-size:17px; line-height:1.7; margin-bottom:40px;">
+            אנחנו לא חברה גדולה עם מוקד שירות. אנחנו צוות קטן שעונה מהר. שלחו הודעה — ונחזור אליכם באותו יום.
+          </p>
+
+          <div style="margin-bottom:32px;">
+            <h4 style="margin-bottom:12px; color:#0891B2;">מייל</h4>
+            <a href="mailto:hello@ai-laesek.co.il" style="font-size:17px; color:#334155;">hello@ai-laesek.co.il</a>
+          </div>
+
+          <div style="margin-bottom:32px;">
+            <h4 style="margin-bottom:12px; color:#0891B2;">וואטסאפ</h4>
+            <p style="font-size:17px; color:#334155;">שלחו הודעה ונחזור מיד</p>
+            <a href="#" class="btn btn-secondary" style="margin-top:12px;">פתחו שיחה בוואטסאפ</a>
+          </div>
+
+          <div style="margin-bottom:32px;">
+            <h4 style="margin-bottom:12px; color:#0891B2;">שעות מענה</h4>
+            <p style="font-size:17px; color:#334155;">ראשון–חמישי, 9:00–18:00</p>
+            <p style="font-size:15px; color:#64748b;">שלחתם הודעה אחרי שעות העבודה? נקרא אותה בבוקר.</p>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div id="lead-form">
+          <div class="form-container" style="margin:0;">
+            <h3 style="text-align:center; margin-bottom:8px;">השאירו פרטים</h3>
+            <p style="text-align:center; color:#64748b; font-size:15px; margin-bottom:24px;">נחזור אליכם באותו יום עבודה</p>
+            <form>
+              <input type="text" class="form-field" placeholder="השם שלכם" autocomplete="name">
+              <input type="tel" class="form-field" placeholder="050-0000000" autocomplete="tel">
+              <input type="email" class="form-field" placeholder="כתובת מייל (אופציונלי)" autocomplete="email">
+              <select class="form-field">
+                <option value="" disabled selected>סוג העסק</option>
+                <option value="medical">רפואה / מרפאה</option>
+                <option value="beauty">יופי וטיפוח</option>
+                <option value="hair">מספרה</option>
+                <option value="therapy">טיפול נפשי</option>
+                <option value="physio">פיזיותרפיה / רפואה משלימה</option>
+                <option value="fitness">כושר / יוגה / פילאטיס</option>
+                <option value="home">שירותי בית</option>
+                <option value="consulting">ייעוץ / עריכת דין / ראיית חשבון</option>
+                <option value="teaching">הוראה פרטית</option>
+                <option value="other">אחר</option>
+              </select>
+              <textarea class="form-field" rows="4" placeholder="איך נוכל לעזור?" style="resize:vertical;"></textarea>
+              <button type="button" class="form-submit">שלחו פרטים</button>
+              <p class="form-privacy">הפרטים שלכם נשמרים אצלנו בלבד. לא נשתף אותם ולא נשלח ספאם.</p>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:40px;">
+        <img src="logo.png" alt="AI-לעסק" style="height:48px; margin:0 auto 8px; filter: brightness(0) invert(1); opacity:0.9;">
+        <p style="font-size:14px; color:#64748b;">עסק שעובד בשבילכם</p>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-col"><h4>על המוצר</h4><ul><li><a href="products.html#whatsapp">נציג וואטסאפ</a></li><li><a href="products.html#calendar">יומן חכם</a></li><li><a href="products.html#website">אתר ודף נחיתה</a></li><li><a href="products.html#crm">ניהול לקוחות</a></li><li><a href="products.html#invoices">חשבוניות ותשלומים</a></li><li><a href="products.html#reminders">תזכורות אוטומטיות</a></li><li><a href="products.html#advisor">יועץ עסקי</a></li></ul></div>
+        <div class="footer-col"><h4>כללי</h4><ul><li><a href="pricing.html">מחירון</a></li><li><a href="about.html">מי אנחנו</a></li><li><a href="#">שאלות נפוצות</a></li><li><a href="#">תנאי שימוש</a></li><li><a href="#">מדיניות פרטיות</a></li></ul></div>
+        <div class="footer-col"><h4>פרטי התקשרות</h4><ul><li><a href="mailto:hello@ai-laesek.co.il">hello@ai-laesek.co.il</a></li><li><a href="#" style="color:#0891B2;">דברו איתנו בוואטסאפ</a></li><li>ראשון–חמישי, 9:00–18:00</li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>&copy; 2026 AI-לעסק. כל הזכויות שמורות.</span><span></span></div>
+    </div>
+  </footer>
+
+  <a href="#" class="wa-float" aria-label="WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+
+</body>
+</html>

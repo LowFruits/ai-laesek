@@ -921,6 +921,27 @@ ul { list-style: none; }
   border-color: #0891B2;
 }
 
+/* ===== FAQ ===== */
+.faq-item {
+  background: #FFFFFF;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-bottom: 16px;
+}
+
+.faq-question {
+  color: #1B2838;
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.faq-answer {
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
 /* ===== Product Sections (products page) ===== */
 .product-section {
   background: #FFFFFF;
@@ -1073,6 +1094,8 @@ ul { list-style: none; }
   .product-row-reverse .product-visual { order: 0; }
   .product-mockup { width: 200px; height: 200px; margin: 0 auto; }
   .product-text h3 { font-size: 24px; }
+  [style*="grid-template-columns:repeat(4"] { grid-template-columns: repeat(2, 1fr) !important; }
+  [style*="grid-template-columns:1fr 1fr; gap:64px"] { grid-template-columns: 1fr !important; gap: 40px !important; }
 }
 
 @media (max-width: 480px) {
